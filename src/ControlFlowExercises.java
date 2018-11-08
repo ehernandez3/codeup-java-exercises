@@ -141,24 +141,66 @@ public class ControlFlowExercises {
 //				4      | 16      | 64
 //				5      | 25      | 125
 
-		System.out.println("Enter a number: ");
 
-		int i, numLimit, square, cube;
-		Scanner input = new Scanner(System.in);
-		numLimit = input.nextInt();
+//		System.out.println("Enter a number: ");
+//
+//		int i, numLimit, square, cube;
+//		Scanner input = new Scanner(System.in);
+//		numLimit = input.nextInt();
+//
+//		System.out.println("number | squared | Cubed ");
+//		System.out.println("------ | ------- | ----- ");
+//
+//		for(i = 1; i <= numLimit; i++){
+//			square = i * i;
+//			cube = i * i * i;
+//
+//			System.out.printf("%-7d| ", i);
+//			System.out.printf("%-8d| ", square);
+//			System.out.printf("%d\n", cube);
+//		}
+//
+//		input.close();
 
-		System.out.println("number | squared | Cubed ");
-		System.out.println("------ | ------- | ----- ");
 
-		for(i = 1; i <= numLimit; i++){
-			square = i * i;
-			cube = i * i * i;
+// 4.
+// 	Convert given number grades into letter grades.
+//
+//		-Prompt the user for a numerical grade from 0 to 100.
+//		-Display the corresponding letter grade.
+//		-Prompt the user to continue.
+//		-Assume that the user will enter valid integers for the grades.
+//		-The application should only continue if the user agrees to.
+//		-Grade Ranges:
+//
+//			-A : 100 - 88
+//			-B : 87 - 80
+//			-C : 79 - 67
+//			-D : 66 - 60
+//			-F : 59 - 0
 
-			System.out.printf("%-7d| ", i);
-			System.out.printf("%-8d| ", square);
-			System.out.printf("%d\n", cube);
+		System.out.println("Enter a numerical grade from 0 to 100:\n" +
+				"A : 100 - 88\n" +
+				"B : 87 - 80\n" +
+				"C : 79 - 67\n" +
+				"D : 66 - 60\n" +
+				"F : 59 - 0\n");
 
+		Scanner grade = new Scanner (System.in);
+		int numericGrade = grade.nextInt();
+
+		if ( numericGrade <= 100 && numericGrade >=88 ) {
+			System.out.println("Your grade is an A");
+		} else if ( numericGrade <= 87 && numericGrade >=80 ) {
+			System.out.println("Your grade is an B");
+		} else if ( numericGrade <= 79 && numericGrade >=67 ) {
+			System.out.println("Your grade is an C");
+		} else if ( numericGrade <= 66 && numericGrade >=60 ) {
+			System.out.println("Your grade is an D");
+		} else if ( numericGrade <= 59 && numericGrade >=0 ) {
+			System.out.println("Your grade is an F");
 		}
+
 
 
 	}
