@@ -12,6 +12,7 @@ public class ControlFlowExercises {
 // 			Your output should look like this:
 //			5 6 7 8 9 10 11 12 13 14 15
 
+//=============== My solution
 //		int i = 5;
 //
 //		while( i <= 15 ) {
@@ -22,7 +23,9 @@ public class ControlFlowExercises {
 //		for (int i = 5; i <= 15; i += 1) {
 //			System.out.print(i + " ");
 //		}
-
+//======================= Justin's Solution
+		// SAME AS ABOVE
+//^^^^^^^^^^^^^^^^^^^^^^^ Justin's Solution
 //		b. Do While
 //
 //		-Create a do-while loop that will count by 2's starting with 0
@@ -35,9 +38,16 @@ public class ControlFlowExercises {
 //			num += 2;
 //		} while (num <= 100);
 
+//		// USING A FOR LOOP
 //		for (int i = 0; i <= 100; i += 2) {
 //			System.out.println(i);
 //		}
+
+//======================= Justin's Solution [
+
+//		SAME AS ABOVE
+
+//^^^^^^^^^^^^^^^^^^^^^^^ Justin's Solution ]
 
 
 //		-Alter your loop to count backwards by 5's from 100 to -10.
@@ -74,10 +84,14 @@ public class ControlFlowExercises {
 //			num *= num;
 //		}while (num <= 1000000L);
 
+//		//FOR LOOP VERSION
 //		for (long i = 2; i <= 1000000L; i *= i) {
 //			System.out.println(i);
 //		}
 
+//======================= Justin's Solution [
+		// SAME AS ABOVE
+//^^^^^^^^^^^^^^^^^^^^^^^ Justin's Solution ]
 
 //		// Solution 2
 //		double num = 2;
@@ -179,27 +193,34 @@ public class ControlFlowExercises {
 //			-D : 66 - 60
 //			-F : 59 - 0
 
-		System.out.println("Enter a numerical grade from 0 to 100:\n" +
-				"A : 100 - 88\n" +
-				"B : 87 - 80\n" +
-				"C : 79 - 67\n" +
-				"D : 66 - 60\n" +
-				"F : 59 - 0\n");
+//=================== My Solution
+//		Scanner sc = new Scanner (System.in);
+//		String keepGoing;
+//
+//
+//		do {
+//			System.out.println("Enter a grade from 0 to 100: ");
+//			int grade = Integer.parseInt(sc.nextLine());
+//
+//			if ( grade <= 100 && grade >= 88 ) {
+//				System.out.println("\nYour grade is an A");
+//			} else if ( grade <= 87 && grade >= 80 ) {
+//				System.out.println("Your grade is a B");
+//			} else if ( grade <= 79 && grade >= 67 ) {
+//				System.out.println("Your grade is a C");
+//			} else if ( grade <= 66 && grade >= 60 ) {
+//				System.out.println("Your grade is a D");
+//			} else if ( grade <= 59 && grade >= 0 ) {
+//				System.out.println("Your grade is a F");
+//			}
+//
+//			System.out.println("Would you like to add another grade? (yes/no)");
+//			keepGoing = sc.nextLine();
+//
+//		} while (keepGoing.equalsIgnoreCase("yes"));
 
-		Scanner grade = new Scanner (System.in);
-		int numericGrade = grade.nextInt();
 
-		if ( numericGrade <= 100 && numericGrade >=88 ) {
-			System.out.println("Your grade is an A");
-		} else if ( numericGrade <= 87 && numericGrade >=80 ) {
-			System.out.println("Your grade is an B");
-		} else if ( numericGrade <= 79 && numericGrade >=67 ) {
-			System.out.println("Your grade is an C");
-		} else if ( numericGrade <= 66 && numericGrade >=60 ) {
-			System.out.println("Your grade is an D");
-		} else if ( numericGrade <= 59 && numericGrade >=0 ) {
-			System.out.println("Your grade is an F");
-		}
+
 
 
 
