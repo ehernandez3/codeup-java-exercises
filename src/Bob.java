@@ -16,34 +16,60 @@ public class Bob {
 
 //		 Write the Java code necessary so that a user of your command line application can have a conversation with Bob.
 
+//========== My Solution
 
-		String questionResponse = "Sure.";
-		String yellResponse = "Whoa, chill out!";
-		String ignoreRespone = "Fine. Be that way!";
-		String otherResponse = "Whatever.";
+//		String questionResponse = "Sure.";
+//		String yellResponse = "Whoa, chill out!";
+//		String ignoreRespone = "Fine. Be that way!";
+//		String otherResponse = "Whatever.";
+//
+//		System.out.println("Hello, I'm Bob.");
+//		boolean exit;
+//
+//		do {
+//			String message = sc.nextLine();
+//			boolean question = message.endsWith("?");
+//			boolean yell =  message.endsWith("!");
+//			boolean ignore = message.equals("");
+//			exit = message.equals("bye");
+//
+//			if(question) {
+//				System.out.println(questionResponse);
+//			}else if (yell) {
+//				System.out.println(yellResponse);
+//			}else if (ignore) {
+//				System.out.println(ignoreRespone);
+//			} else {
+//				System.out.println(otherResponse);
+//			}
+//		} while (!exit);
 
+//==================== Justin's Solution
 
+		// Scanner at the top
 
-		System.out.println("Hello, I'm Bob.");
-		boolean exit;
-
+		boolean willContinue = true;
 		do {
-			String message = sc.nextLine();
-			boolean question = message.endsWith("?");
-			boolean yell =  message.endsWith("!");
-			boolean ignore = message.equals("");
-			exit = message.equals("bye");
+			System.out.println("Say something to Bob!");
+			String userQuery = sc.nextLine();
+			String bobResponse;
 
-			if(question) {
-				System.out.println(questionResponse);
-			}else if (yell) {
-				System.out.println(yellResponse);
-			}else if (ignore) {
-				System.out.println(ignoreRespone);
+
+			if (userQuery.endsWith("?")) {
+				bobResponse = "Sure.";
+			} else if (userQuery.endsWith("!")) {
+				bobResponse = "Whoa, chill out!";
+			} else if (userQuery.equals("")) {
+				bobResponse = "Fine. Be that way!";
 			} else {
-				System.out.println(otherResponse);
+				bobResponse = "Whatever.";
 			}
-		} while (!exit);
+
+			System.out.println(bobResponse);
+			System.out.println("Do you still want to talk to Bob?");
+			willContinue = (sc.nextLine().equals("yes"));
+
+		} while (willContinue);
 
 
 	}
