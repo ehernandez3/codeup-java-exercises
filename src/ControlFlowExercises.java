@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 	public static void main(String[] args) {
 
@@ -139,7 +141,24 @@ public class ControlFlowExercises {
 //				4      | 16      | 64
 //				5      | 25      | 125
 
-		System.out.println("Please enter an integer");
+		System.out.println("Enter a number: ");
+
+		int i, numLimit, square, cube;
+		Scanner input = new Scanner(System.in);
+		numLimit = input.nextInt();
+
+		System.out.println("number | squared | Cubed ");
+		System.out.println("------ | ------- | ----- ");
+
+		for(i = 1; i <= numLimit; i++){
+			square = i * i;
+			cube = i * i * i;
+
+			System.out.printf("%-7d| ", i);
+			System.out.printf("%-8d| ", square);
+			System.out.printf("%d\n", cube);
+
+		}
 
 
 	}
