@@ -175,11 +175,11 @@ public class MethodsExercises {
 
 // Github Solution Exercise 4
 
-//    public static int randomWithRange(int min, int max)
-////    {
-////        int range = (max - min) + 1;
-////        return (int)(Math.random() * range) + min;
-////    }
+    public static int randomWithRange(int min, int max)
+    {
+        int range = (max - min) + 1;
+        return (int)(Math.random() * range) + min;
+    }
 ////
 ////    public static void rollDiceGame(Scanner sc) {
 ////        String userChoice;
