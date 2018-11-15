@@ -1,8 +1,27 @@
 package movies;
 
+import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
+
 public class Movie {
     private String name;
     private String category;
+
+    public Movie() {}
+    public Movie(String name, String category){
+        this.name = name;
+        this.category = category;
+    }
+
+    public String getName(){ // Use the data type for Getters.
+        return this.name;
+    }
+
+    public void setName(String name) { // Use "void" for Setters instead of the data type.
+        this.name = name;
+    }
+
+
+
 //    Movie List
 //
 //    We are going to build an application that keeps track of movies and displays them by category.
