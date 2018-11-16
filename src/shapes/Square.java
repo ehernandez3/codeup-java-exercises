@@ -6,13 +6,15 @@ public class Square extends Quadrilateral{
     }
 
     @Override
-    public void set_length(double side) {
-        this._length = side;
+    public void set_length(double length) {
+        this._length = length;
+        this._width = length;
     }
 
     @Override
-    public void set_width(double side) {
-         this._length = side;
+    public void set_width(double width) {
+         this._length = width;
+         this._width = width;
     }
 
     @Override
