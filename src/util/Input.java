@@ -30,7 +30,7 @@ public class Input {
     }
 //    int getInt()
     public int getInt() {
-        System.out.println("Enter a number");
+//        System.out.println("Enter a number");
         int num = this.sc.nextInt();
         return num;
 
