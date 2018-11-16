@@ -20,6 +20,13 @@ public class Movie {
         this.name = name;
     }
 
+    public String getCategory(){ // Use the data type for Getters.
+        return this.category;
+    }
+
+    public void setCategory(String category) { // Use "void" for Setters instead of the data type.
+        this.category = category;
+    }
 
 
 //    Movie List

@@ -31,13 +31,13 @@ public class ArraysExercises {
             people[1] = p2;
             people[2] = p3;
 
-
-
-
-
             for (int i = 0; i < people.length; i += 1) {
                 System.out.println(people[i].getName());
             }
+
+//            Person[] people = {p1, p2, p3};
+
+
 
 
             Person[] morePeople = addPerson(people, new Person("Jimbo"));
@@ -52,14 +52,12 @@ public class ArraysExercises {
 //        add to the passed array. It should return an array whose length
 //        is 1 greater than the passed array, with the passed person object
 //        at the end of the array.
+
         public static Person[] addPerson(Person[] personArr, Person person) {
             Person[] newPersonArray = Arrays.copyOf(personArr, personArr.length + 1);
-            newPersonArray[personArr.length] = person;
+            newPersonArray[newPersonArray.length -1] = person;
             return newPersonArray;
 
-
-//            personArr.length + 1 =
-//                return addPerson();
     }
 
 
