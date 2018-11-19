@@ -16,8 +16,8 @@ public class MoviesApplication {
     }
 
     public static String userPrompts(){
-        return
-        "What would you like to do?\n\n" +
+        return "What would you like to do?\n" +
+        "\n" +
         "0 - exit\n" +
         "1 - view all movies\n" +
         "2 - view movies in the animated category\n" +
