@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Student {
     private String name;
-    private ArrayList<Integer> grades;
+    private List<Integer> grades;
 
     public Student(String name) {
         this.name = name;
-        grades = new ArrayList<>();
+        this.grades = new ArrayList<>();
      }
 
     // returns the student's name
@@ -24,11 +24,11 @@ public class Student {
 
     // returns the average of the students grades
     public double getGradeAverage() {
-        double sum = 0;
-        for (double grade : grades) {
+        int sum = 0;
+        for (int grade : this.grades) {
             sum += grade;
         }
-        double average = sum / grades.size();
+        int average = sum / grades.size();
         return Math.round(average);
     }
 
