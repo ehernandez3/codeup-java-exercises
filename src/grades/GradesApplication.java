@@ -16,7 +16,7 @@ public class GradesApplication {
 
         System.out.println(welcomeMessage());
         System.out.println(userList());
-        userPrompts(sc);
+        userPrompts(sc, students);
 
 
 //        System.out.println("Here are the github usernames of our students:");
@@ -61,22 +61,25 @@ public class GradesApplication {
         return "Welcome!";
     }
     public static String userList() {
-        return "Here are the github usernames of our students:\n" +
+        return "Here are the github usernames of our students:\n\n" +
                 getStudents().keySet();
     }
 
-    private static void userPrompts(Input sc) {
-        System.out.println("What student would you like to see more information on?");
+
+
+    private static void userPrompts(Input sc,  HashMap<String, Student> students) {
+        System.out.println("\nWhat student would you like to see more information on?");
         String userInput = sc.getString();
         if (getStudents().containsKey(userInput)) {
-            System.out.println(getStudents().get(userInput).getName());
-            System.out.println(getStudents().get(userInput).getGradeAverage());
-        } else if (!getStudents().containsKey(userInput)) {
+            System.out.println("Name: " + students.get(userInput).getName() +
+                    " - Gihub Username: " + userInput);
+            System.out.println("Current Average: " + students.get(userInput).getGradeAverage());
+        } else if (!students.containsKey(userInput)) {
             System.out.println("Sorry, no student found with the gihub username of \"" + userInput + "\".");
             System.out.println("Would you like to see another student?");
             String userInput2 = sc.getString();
             if (userInput2.equalsIgnoreCase("yes") || userInput2.equalsIgnoreCase("y")) {
-                userPrompts(sc);
+                userPrompts(sc, students);
             }
         }
 
