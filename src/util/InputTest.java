@@ -1,7 +1,18 @@
 package util;
 
+import java.util.Scanner;
+
 public class InputTest {
+
+//    public int getBinary() {
+//        int output;
+//        try {
+//            output = Integer.valueOf(new Scanner(System.in));
+//        }
+//    }
+
     public static void main (String[] arg) {
+//            Input in = new Input(new Scanner(System.in));
 
 //    String getString()
 //        System.out.println("Please enter a string: ");
@@ -26,6 +37,13 @@ public class InputTest {
 
 //    double getDouble()
 //        System.out.println(input2.getDouble(10, 20));
+
+        Input input = new Input();
+//        input.getInt();
+//        input.getInt(5, 10);
+        input.getDouble();
+//        input.getDouble(5, 10);
+
     }
 
 }
