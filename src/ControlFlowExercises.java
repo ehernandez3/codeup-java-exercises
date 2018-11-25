@@ -102,21 +102,55 @@ public class ControlFlowExercises {
 
 //		-For numbers which are multiples of both three and five print “FizzBuzz”.
 
-			for(int num = 1; num <= 100; num += 1) {
-				if (num % 15 == 0) {
-					System.out.println("FizzBuzz");
-				} else if (num % 5 ==0) {
-					System.out.println("Buzz");
-				} else if (num % 3 == 0) {
-					System.out.println("Fizz");
-				} else {
-					System.out.println(num);
-				}
+//			for(int num = 1; num <= 100; num += 1) {
+//				if (num % 15 == 0) {
+//					System.out.println("FizzBuzz");
+//				} else if (num % 5 ==0) {
+//					System.out.println("Buzz");
+//				} else if (num % 3 == 0) {
+//					System.out.println("Fizz");
+//				} else {
+//					System.out.println(num);
+//				}
+//			}
+
+
+
+		// Exercise 3 - Display a table of powers.
+//
+//		-Prompt the user to enter an integer.
+//		-Display a table of squares and cubes from 1 to the value entered.
+//		-Ask if the user wants to continue.
+//		-Assume that the user will enter valid data.
+//		-Only continue if the user agrees to.
+//
+// 		Example Output
+//
+//		What number would you like to go up to? 5
+//
+//		Here is your table!
+//
+//				number | squared | cubed
+//				------ | ------- | -----
+//				1      | 1       | 1
+//				2      | 4       | 8
+//				3      | 9       | 27
+//				4      | 16      | 64
+//				5      | 25      | 125
+
+
+
+			Scanner in = new Scanner(System.in);
+
+			System.out.print("Please enter an integer: ");
+			int num = in.nextInt();
+			in.nextLine();
+			System.out.println("\nHere is your table!\n");
+			System.out.println("number | squared | cubed");
+			System.out.println("------ | ------- | -----");
+			for (int i = 1; i <= num; i += 1) {
+				System.out.printf("%-6d | %-7d | %-5d%n", i, (int) Math.pow(i, 2), (int) Math.pow(i, 3));
 			}
-
-
-
-
 
 	}
 }
