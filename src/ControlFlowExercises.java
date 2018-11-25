@@ -140,17 +140,60 @@ public class ControlFlowExercises {
 
 
 
-			Scanner in = new Scanner(System.in);
+//			Scanner in = new Scanner(System.in);
+//
+//			System.out.print("Please enter an integer: ");
+//			int num = in.nextInt();
+//			in.nextLine();
+//			System.out.println("\nHere is your table!\n");
+//			System.out.println("number | squared | cubed");
+//			System.out.println("------ | ------- | -----");
+//			for (int i = 1; i <= num; i += 1) {
+//				System.out.printf("%-6d | %-7d | %-5d%n", i, (int) Math.pow(i, 2), (int) Math.pow(i, 3));
+//			}
 
-			System.out.print("Please enter an integer: ");
-			int num = in.nextInt();
-			in.nextLine();
-			System.out.println("\nHere is your table!\n");
-			System.out.println("number | squared | cubed");
-			System.out.println("------ | ------- | -----");
-			for (int i = 1; i <= num; i += 1) {
-				System.out.printf("%-6d | %-7d | %-5d%n", i, (int) Math.pow(i, 2), (int) Math.pow(i, 3));
-			}
+
+
+		// Exercise 4 - Convert given number grades into letter grades.
+			//-Prompt the user for a numerical grade from 0 to 100.
+			//-Display the corresponding letter grade.
+			//-Prompt the user to continue.
+			//-Assume that the user will enter valid integers for the grades.
+			//-The application should only continue if the user agrees to.
+			//	Grade Ranges:
+			//
+			//	A : 100 - 88
+			//	B : 87 - 80
+			//	C : 79 - 67
+			//	D : 66 - 60
+			//	F : 59 - 0
+
+			Scanner in = new Scanner(System.in);
+			boolean userContinues = true;
+			do {
+				System.out.print("Please enter a grade from 0 to 100: ");
+				int numberGrade = in.nextInt();
+				String letterGrade = "";
+				if (numberGrade >= 88) {
+					letterGrade = "A";
+				} else if (numberGrade >= 80) {
+					letterGrade = "B";
+				} else if (numberGrade >= 67) {
+					letterGrade = "C";
+				} else if (numberGrade >= 60) {
+					letterGrade = "D";
+				} else {
+					letterGrade = "F";
+				}
+
+				System.out.println("\n" + letterGrade + "\n");
+				System.out.print("Would you like to enter another grade? Please enter yes or no: ");
+				in.nextLine();
+				String answer = in.next();
+				if (!answer.equalsIgnoreCase("yes")) {
+					userContinues = false;
+				}
+			} while (userContinues);
 
 	}
 }
