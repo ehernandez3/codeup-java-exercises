@@ -14,6 +14,7 @@ public class FileIo {
     //and return a list of strings where each string is a line in the file.
 
     public static void main(String[] args) {
+//        System.out.println("test");
         System.out.println(getFilesContents("src/IOPractice/test.txt"));
         System.out.println(addToFile("Hello"));
     }
